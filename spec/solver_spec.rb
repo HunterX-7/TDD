@@ -16,7 +16,7 @@ describe Solver do
         context 'takes one argument, a string word' do
             it 'returns word reversed' do
                 flip = Solver.new('Hello')
-                expect(flip.reverse).to eq('olleh')
+                expect(flip.reverse).to eq('olleH')
             end
         end
     end

@@ -1,17 +1,23 @@
 class Solver
-    def initialize(number)
-        @number = number
+    def initialize(arg)
+        @arg = arg
     end
     
     def factorial
-        if @number == 0
+        if @arg == 0
             return 1
         else
             factorial = 1
-            (1..@number).each do |x|
+            (1..@arg).each do |x|
                 factorial = factorial * x
             end
             return factorial
         end
+    end
+
+    def reverse
+        reverse_string = ''
+        @arg.each_char { |x| reverse_string = x + reverse_string }
+        reverse_string
     end
 end
