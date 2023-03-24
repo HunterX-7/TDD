@@ -4,8 +4,10 @@ describe Solver do
   describe '#factorial' do
     context 'takes one argument, an integer N' do
       it 'returns the factorial' do
+        factorial_negative = Solver.new(-5)
         factorial_zero = Solver.new(0)
         factorial_five = Solver.new(5)
+        expect(factorial_negative.factorial).to eq('Error')
         expect(factorial_zero.factorial).to eq(1)
         expect(factorial_five.factorial).to eq(120)
       end
