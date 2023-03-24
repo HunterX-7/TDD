@@ -4,13 +4,17 @@ class Solver
   end
 
   def factorial
-    return 1 if @arg.zero?
-
-    factorial = 1
-    (1..@arg).each do |x|
-      factorial *= x
+    if @arg < 0
+      raise ArgumentError, 'Error: Please enter a positive number'
+    elsif @arg.zero?
+      return 1
+    else
+      factorial = 1
+      (1..@arg).each do |x|
+        factorial *= x
+      end
+      return factorial
     end
-    factorial
   end
 
   def reverse

@@ -7,7 +7,7 @@ describe Solver do
         factorial_negative = Solver.new(-5)
         factorial_zero = Solver.new(0)
         factorial_five = Solver.new(5)
-        expect(factorial_negative.factorial).to eq('Error')
+        expect{factorial_negative.factorial}.to raise_error(ArgumentError, 'Error: Please enter a positive number')
         expect(factorial_zero.factorial).to eq(1)
         expect(factorial_five.factorial).to eq(120)
       end
