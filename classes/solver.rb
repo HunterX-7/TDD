@@ -6,7 +6,6 @@ class Solver
   def factorial
     return 1 if @arg.zero?
 
-
     factorial = 1
     (1..@arg).each do |x|
       factorial *= x
