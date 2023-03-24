@@ -4,16 +4,16 @@ class Solver
   end
 
   def factorial
-    if @arg < 0
+    if @arg.negative?
       raise ArgumentError, 'Error: Please enter a positive number'
     elsif @arg.zero?
-      return 1
+      1
     else
       factorial = 1
       (1..@arg).each do |x|
         factorial *= x
       end
-      return factorial
+      factorial
     end
   end
 
